@@ -9,9 +9,9 @@ var port = 3013;
 var app = express();
 
 app.get('/', (req, res) => {
-	req.query.nome
-	res.write("<h1> Etapa 1 - INSTALACAO - EndPoint GET</h1>")
-	res.end("<h2>Hello " + req.query.nome + " voce conseguiu um GET! bem sucedido</h2>");
+	req.query.nome //pega o nome que foi informado por query params
+	res.write("<h1> Etapa 1 - INSTALACAO - EndPoint GET</h1>") 
+	res.end("<h2>Hello " + req.query.nome + " voce conseguiu um GET! bem sucedido</h2>"); //monta o html para enviar como response
 });
 
 // Inicia o servidor
