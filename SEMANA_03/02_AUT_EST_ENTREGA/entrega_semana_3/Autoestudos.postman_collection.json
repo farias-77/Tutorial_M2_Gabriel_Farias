@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "791e999e-938c-4f37-a346-476617136dce",
+		"name": "Autoestudos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25079475"
+	},
+	"item": [
+		{
+			"name": "Semana 3",
+			"item": [
+				{
+					"name": "Read users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Gabriel Farias Alves\",\r\n    \"cargo\": \"Estudante turma 6\",\r\n    \"foto_url\": \"https://www.inteli.edu.br/\",\r\n    \"telefone\": \"32999089257\",\r\n    \"email\": \"gabriel.alves@sou.inteli.edu.br\",\r\n    \"endereco\": \"Share Butanta\",\r\n    \"texto_introducao\": \"Autoestudo semana 3!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/insertUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"insertUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/updateUser?userId=4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"updateUser"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user by id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Gabriel Farias Alves Atualizado\",\r\n    \"cargo\": \"Estudante turma 6\",\r\n    \"foto_url\": \"https://www.inteli.edu.br/\",\r\n    \"telefone\": \"32999089257\",\r\n    \"email\": \"gabriel.alves@sou.inteli.edu.br\",\r\n    \"endereco\": \"Share Butanta\",\r\n    \"texto_introducao\": \"Autoestudo semana 3!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/updateUser?userId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"updateUser"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/removeUser?userId=4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"removeUser"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
